@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('../iconfont/IconFont/iconfont.css');
+
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: #111b29;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 99px;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+.hidder {
+  overflow: hidden;
+}
+
+div {
+  position: absolute;
+}
+
+.static {
+  position: static;
+}
+
+main {
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.conter {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  font-size: 4vw;
+  background: linear-gradient(#22384d, #142840);
+  transition: all 1.5s;
+}
+
+.scrollDist {
+  width: 100%;
+  height: 300%;
+}
+
+
+.article {
+  position: relative;
+  top: 180%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #162a43;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+
+.article i.iconfont {
+  font-size: 2vw;
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  transition: all 1.5s;
+}
+
+.article i.left {
+  top: 1.8vw;
+  left: .7vw;
+  animation: left 1.3s ease-in-out infinite alternate;
+}
+
+.article i.right {
+  top: 1.8vw;
+  right: .7vw;
+  animation: right 1.3s ease-in-out infinite alternate;
+}
+
+@keyframes left {
+  100% {
+    transform: translateX(-30%);
+  }
+}
+
+@keyframes right {
+  100% {
+    transform: translateX(30%);
+  }
+}
+
+/* bear */
+.article .bear {
+  margin-top: 4.8vw;
+  transform: translateX(-12vw);
+  transition: all 5s;
+}
+
+.article .background {
+  width: 200px;
+  height: 100px;
+  background: url(../image/bear.png);
+  animation: bear 1s steps(8) infinite;
+}
+
+@keyframes bear {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -1600px, 0;
+  }
+}
+
+.article .Sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vw;
+}
+
+.article iframe {
+  margin-top: 12.5vw;
+  width: 100%;
+  height: 45%;
+  transition: all .3s;
+}
+
+/* cloud  */
+.article .cloud {
+  width: 100%;
+  padding-top: 12vw;
+  background-color: #162a43;
+  margin-top: -3.7vw;
+}
+
+
+/* 第三部分背景图 */
+
+@font-face {
+  font-display: block;
+  font-family: Mori;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://assets.codepen.io/16327/PPMori-Regular.woff) format("woff");
+}
+
+main .background {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #0e100f;
+  font-weight: 400;
+}
+
+main .background .container {
+  position: relative;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 9px;
+}
+
+
+main .background .text {
+  color: #dfdcff;
+  line-height: 1.2;
+  box-sizing: border-box;
+  padding: 5%;
+  width: 100%;
+  text-align: center;
+  perspective: 500px;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+/* 云 */
+/* 第三模块 */
+
+.section {
+  position: relative;
+  top: 310%;
+  width: 100%;
+  height: 2400px;
+}
+
+
+.section .pic .img {
+  position: relative;
+  width: 100%;
+  height: 80vw;
+}
+
+
+.section .pic .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 58vw;
+  background: linear-gradient(#22384d, #142840);
+}
+
+
+/* ----------------- */
+
+.section .container iframe {
+  width: 94vw;
+  height: 50vw;
+}
+
+.section .label {
+  width: 100%;
+  height: 70vw;
+  overflow: hidden;
+  background-color: pink;
+}
+
+/* 标签 */
+.section .label iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* 底部 */
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 22vw;
+  padding: 2vw 10vw 0;
+  font-size: .8vw;
+  color: #7c7c92;
+  background-color: #fafafa;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #f54278;
+}
+
+.footer .left .title {
+  display: flex;
+  align-items: center;
+  color: #273679;
+}
+
+.footer .left .title i {
+  font-size: 2vw;
+}
+
+.footer .left .title h2 {
+  font-size: 2vw;
+  margin-left: .5vw;
+  text-transform: uppercase;
+}
+
+.footer .left .Follow {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 1.5vw;
+}
+
+.footer .left .tab {
+  margin-top: 5vw;
+}
+
+.footer .left .tab i {
+  font-size: 1.2vw;
+  margin-right: 2vw;
+}
+
+/* 右边 */
+
+.footer .right {
+
+  display: flex;
+  text-align: left;
+}
+
+
+.footer .right dt {
+  margin: 2vw 5vw 2vw 0;
+}
+
+
+.footer .right dl dd {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1.2vw 0;
+}
+
+.footer .footer-nav {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2vw;
+  text-align: center;
+  line-height: 2vw;
+  font-family: Arial;
+  border-top: 1px solid #d3d3d3;
+}

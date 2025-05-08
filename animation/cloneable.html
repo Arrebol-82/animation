@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./cloneable.css">
+  <!-- 引入GSAP 核心库 -->
+  <link rel="stylesheet" href="./cloneable.css">
+  <!-- 引入GSAP 核心库 -->
+  <script src="../gsap-public/umd/gsap.js"></script>
+  <!-- 引入CustomEase 插件 -->
+  <script src="../gsap-public/umd/CustomEase.js"></script>
+  <!-- 引入Flip 插件 -->
+  <script src="../gsap-public/umd/Flip.js"></script>
+  <!-- 引入ScrollTrigger 插件 平滑 -->
+  <script src="../gsap-public/umd/ScrollTrigger.js"></script>
+</head>
+
+<body>
+  <section class="cloneable">
+    <div class="page">
+      <div class="main">
+        <div class="main-col">
+          <div class="main-img__list">
+            <div class="main-img__item"><img src="./image/Eclipse Lodge.avif" loading="lazy" alt="" class="image"></div>
+            <div class="main-img__item"><img src="./image/Serenity Peaks.avif" loading="lazy" sizes="224px" alt=""
+                class="image"></div>
+            <div class="main-img__item"><img src="./image/The Celestial Inn.avif" loading="lazy" sizes="224px" alt=""
+                class="image"></div>
+            <div class="main-img__item"><img src="./image/Aurora Heights Hotel.avif" loading="lazy" sizes="224px" alt=""
+                class="image"></div>
+            <div class="main-img__item"><img src="./image/Golden Sands Retreat.avif" loading="lazy" alt=""
+                class="image"></div>
+          </div>
+        </div>
+        <div class="main-col">
+          <ul class="main-title__list">
+            <li class="main-title__item"><button class="button">
+                <h2 class="main-title">Eclipse Lodge</h2>
+              </button></li>
+            <li class="main-title__item"><button class="button">
+                <h2 class="main-title">Serenity Peaks</h2>
+              </button></li>
+            <li class="main-title__item"><button class="button">
+                <h2 class="main-title">The Celestial Inn</h2>
+              </button></li>
+            <li class="main-title__item"><button class="button">
+                <h2 class="main-title">Aurora Heights Hotel</h2>
+              </button></li>
+            <li class="main-title__item"><button class="button">
+                <h2 class="main-title">Golden Sands Retreat</h2>
+              </button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="overlay-wrap">
+        <div class="overlay-item">
+          <div class="overlay-hero">
+            <div data-overlay="text-target" class="overlay-title__wrap"></div>
+            <div data-overlay="img-target" class="overlay-img__wrap"></div>
+          </div>
+          <div class="overlay-row">
+            <div class="overlay-col col-left">
+              <div class="overlay-col__img"><img src="./image/Eclipse Lodge1.avif" loading="lazy" alt="" class="image">
+              </div>
+            </div>
+            <div class="overlay-col col-right">
+              <div class="overlay-col__img"><img src="./image/Eclipse Lodge2.avif" loading="lazy" alt="" class="image">
+              </div>
+              <p class="paragraph">A sophisticated getaway with modern architecture and unforgettable sunsets, where
+                every
+                moment feels timeless.</p>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-item">
+          <div class="overlay-hero">
+            <div data-overlay="text-target" class="overlay-title__wrap"></div>
+            <div data-overlay="img-target" class="overlay-img__wrap"></div>
+          </div>
+          <div class="overlay-row">
+            <div class="overlay-col col-left">
+              <div class="overlay-col__img"><img src="./image/Serenity Peaks1.jpg" loading="lazy" alt="" class="image">
+              </div>
+            </div>
+            <div class="overlay-col col-right">
+              <div class="overlay-col__img"><img src="./image/Serenity Peaks2.jpg" loading="lazy" alt="" class="image">
+              </div>
+              <p class="paragraph">Tucked among towering peaks and serene valleys, this haven offers a peaceful escape
+                from the noise of the world.</p>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-item">
+          <div class="overlay-hero">
+            <div data-overlay="text-target" class="overlay-title__wrap"></div>
+            <div data-overlay="img-target" class="overlay-img__wrap"></div>
+          </div>
+          <div class="overlay-row">
+            <div class="overlay-col col-left">
+              <div class="overlay-col__img"><img src="./image/The Celestial Inn1.jpg" loading="lazy" alt=""
+                  class="image"></div>
+            </div>
+            <div class="overlay-col col-right">
+              <div class="overlay-col__img"><img src="./image/The Celestial Inn2.jpg" loading="lazy" alt=""
+                  class="image"></div>
+              <p class="paragraph">A sanctuary above the clouds, offering celestial views and unmatched tranquility for
+                dreamers and stargazers alike.</p>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-item">
+          <div class="overlay-hero">
+            <div data-overlay="text-target" class="overlay-title__wrap"></div>
+            <div data-overlay="img-target" class="overlay-img__wrap"></div>
+          </div>
+          <div class="overlay-row">
+            <div class="overlay-col col-left">
+              <div class="overlay-col__img"><img src="./image/Aurora Heights Hotel1.jpg" loading="lazy" alt=""
+                  class="image"></div>
+            </div>
+            <div class="overlay-col col-right">
+              <div class="overlay-col__img"><img src="./image/Aurora Heights Hotel2.jpg" loading="lazy" alt=""
+                  class="image"></div>
+              <p class="paragraph">Nestled in the heart of nature, this retreat is the perfect place to watch the
+                northern
+                lights dance across the sky.</p>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-item">
+          <div class="overlay-hero">
+            <div data-overlay="text-target" class="overlay-title__wrap"></div>
+            <div data-overlay="img-target" class="overlay-img__wrap"></div>
+          </div>
+          <div class="overlay-row">
+            <div class="overlay-col col-left">
+              <div class="overlay-col__img"><img src="./image/Golden Sands Retreat1.jpg" loading="lazy" alt=""
+                  class="image"></div>
+            </div>
+            <div class="overlay-col col-right">
+              <div class="overlay-col__img"><img src="./image/Golden Sands Retreat2.jpg" loading="lazy" alt=""
+                  class="image"></div>
+              <p class="paragraph">Feel the warmth of the sun and the embrace of golden shores, where luxury meets the
+                serenity of the sea.</p>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-nav">
+          <button data-overlay="close" class="button text">
+            <p data-overlay="nav-item" class="text-reg">Back to list</p>
+          </button>
+          <p data-overlay="nav-item" class="text-reg">Scroll to explore</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./cloneable.js"></script>
+</body>
+
+</html>

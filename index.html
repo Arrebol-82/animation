@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./css/animation.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <!-- 引入GSAP 核心库 -->
+  <script src="./gsap-public/umd/gsap.js"></script>
+  <!-- 引入ScrollTrigger 插件 平滑 -->
+  <script src="./gsap-public/umd/ScrollTrigger.js"></script>
+  <script src="./gsap-public/umd/SplitText.min.js"></script>
+</head>
+
+<body class="hidder">
+  <div class="conter static">
+    <svg class="spinner" viewBox="0 0 48 48" role="img"
+      aria-label="A partial ring that rotates and then is shaped as a checkmark, which pops out yielding confetti">
+      <g fill="none" stroke="currentcolor" stroke-linecap="round" stroke-width="4">
+        <circle class="spinner__worm" cx="24" cy="24" r="22" stroke-dasharray="138.23 138.23" stroke-dashoffset="-51.84"
+          transform="rotate(-119)" />
+        <circle class="spinner__pop-end" stroke="var(--light-green)" cx="24" cy="24" r="18" opacity="0" />
+        <g fill="currentcolor" stroke="none">
+          <circle class="spinner__pop-start" fill="var(--light-green)" cx="24" cy="24" r="20" opacity="0" />
+          <g>
+            <g class="spinner__pop-dot-group" opacity="0">
+              <circle class="spinner__pop-dot" fill="var(--periwinkle)" cx="22" cy="5" r="1.5" />
+            </g>
+            <g class="spinner__pop-dot-group" opacity="0">
+              <circle class="spinner__pop-dot" fill="var(--light-blue)" cx="26" cy="2" r="1.5" />
+            </g>
+          </g>
+          <g transform="rotate(51.43,24,24)">
+            <g class="spinner__pop-dot-group" opacity="0">
+              <circle class="spinner__pop-dot" fill="var(--orange)" cx="22" cy="5" r="1.5" />
+            </g>
+            <g class="spinner__pop-dot-group" opacity="0">
+              <circle class="spinner__pop-dot" fill="var(--magenta)" cx="26" cy="2" r="1.5" />
+            </g>
+          </g>
+          <g transform="rotate(102.86,24,24)">
+            <g class="spinner__pop-dot-group" opacity="0">
+              <circle class="spinner__pop-dot" fill="var(--light-green)" cx="22" cy="5" r="1.5" />
+            </g>
+            <g class="spinner__pop-dot-group" opacity="0">
+              <circle class="spinner__pop-dot" fill="var(--light-teal)" cx="26" cy="2" r="1.5" />
+            </g>
+          </g>
+          <g transform="rotate(154.29,24,24)">
+            <g class="spinner__pop-dot-group" opacity="0">
+              <circle class="spinner__pop-dot" fill="var(--purple)" cx="22" cy="5" r="1.5" />
+            </g>
+            <g class="spinner__pop-dot-group" opacity="0">
+              <circle class="spinner__pop-dot" fill="var(--magenta)" cx="26" cy="2" r="1.5" />
+            </g>
+          </g>
+          <g transform="rotate(205.71,24,24)">
+            <g class="spinner__pop-dot-group" opacity="0">
+              <circle class="spinner__pop-dot" fill="var(--light-teal)" cx="22" cy="5" r="1.5" />
+            </g>
+            <g class="spinner__pop-dot-group" opacity="0">
+              <circle class="spinner__pop-dot" fill="var(--light-blue)" cx="26" cy="2" r="1.5" />
+            </g>
+          </g>
+          <g transform="rotate(257.14,24,24)">
+            <g class="spinner__pop-dot-group" opacity="0">
+              <circle class="spinner__pop-dot" fill="var(--periwinkle)" cx="22" cy="5" r="1.5" />
+            </g>
+            <g class="spinner__pop-dot-group" opacity="0">
+              <circle class="spinner__pop-dot" fill="var(--light-blue)" cx="26" cy="2" r="1.5" />
+            </g>
+          </g>
+          <g transform="rotate(308.57,24,24)">
+            <g class="spinner__pop-dot-group" opacity="0">
+              <circle class="spinner__pop-dot" fill="var(--purple)" cx="22" cy="5" r="1.5" />
+            </g>
+            <g class="spinner__pop-dot-group" opacity="0">
+              <circle class="spinner__pop-dot" fill="var(--light-teal)" cx="26" cy="2" r="1.5" />
+            </g>
+          </g>
+        </g>
+        <path class="spinner__check" d="M 17 25 L 22 30 C 22 30 32.2 19.8 37.3 14.7 C 41.8 10.2 39 7.9 39 7.9"
+          stroke-dasharray="36.7 36.7" stroke-dashoffset="-36.7" />
+      </g>
+    </svg>
+  </div>
+  <!-- 这是原作者 , 因为做的太好看了 , 所以借鉴一下 -->
+  <!-- This is a recreation of Unfold's (https://dribbble.com/unfold) parallax scene: https://cdn.dribbble.com/users/14268/screenshots/3275340/northface.gif -->
+  <div class="scrollDist"></div>
+  <main>
+    <!-- 主要用于svg 绘制 -->
+    <!-- 它是按照w3c的规则来绘制svg -->
+    <svg viewBox="0 0 1200 800" xmlns="https://www.w3.org/TR/SVG2/">
+      <mask id="m">
+        <g class="cloud1">
+          <rect fill="#fff" width="100%" height="801" y="799" />
+          <image xlink:href="image/cloud1Mask.jpg" width="1200" height="800" />
+        </g>
+      </mask>
+
+      <image class="sky" xlink:href="image/sky.jpg" width="1200" height="590" />
+      <image class="mountBg" xlink:href="image/mountBg.webp" width="1200" height="800" />
+      <image class="mountMg" xlink:href="image/mountMg.png" width="1200" height="800" />
+      <image class="cloud2" xlink:href="image/cloud2.webp" width="1200" height="800" />
+      <image class="mountFg" xlink:href="image/mountFg.png" width="1200" height="800" />
+      <image class="cloud1" xlink:href="image/cloud1.png" width="1200" height="800" />
+      <image class="cloud3" xlink:href="image/cloud3.png" width="1200" height="800" />
+      <text fill="#fff" x="350" y="200">EXPLORE</text>
+      <polyline class="arrow" fill="#fff"
+        points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
+      <g mask="url(#m)">
+        <rect fill="#fff" width="100%" height="100%" />
+        <text x="350" y="200" fill="#162a43">FURTHER</text>
+      </g>
+
+      <rect id="arrow-btn" width="100" height="100" opacity="0" x="550" y="220" style="cursor:pointer" />
+    </svg>
+    <div class="background">
+      <div class="container">
+        <div class="text">
+          Break apart HTML text into characters, words, and/or lines for easy animation.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 第二模块 -->
+  <article class="article">
+    <i class="left iconfont icon-zuo"></i>
+    <i class="right iconfont icon-you"></i>
+    <div class="bear">
+      <div class="background">
+
+      </div>
+    </div>
+
+    <div class="Sticky">
+      <iframe src="./animation/cloneable.html" frameborder="0"></iframe>
+      <div class="cloud">
+      </div>
+    </div>
+  </article>
+
+  <!-- 第三模块 -->
+  <section class="section">
+    <div class="pic static">
+      <div class="img">
+        <img src="./image/cloudbackground.png" alt="" class="beijing">
+      </div>
+    </div>
+    <div class="container static">
+      <iframe data-src="./scenery/scenery.html" src=""></iframe>
+    </div>
+    <div class="label static">
+      <iframe src="./label/label.html" frameborder="0"></iframe>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="footer">
+      <div class="left static">
+        <div class="title static">
+          <i class="iconfont icon-shuangxia"></i>
+          <h2>animation</h2>
+        </div>
+        <div class="Follow ">
+          Animation us on
+        </div>
+        <div class="tab">
+          <a href="https://github.com/" target="_blank"><i class="iconfont icon-github-fill"></i></a>
+          <a href="https://store.steampowered.com/about/" target="_blank"><i class="iconfont icon-steam"></i></a>
+          <a href="https://music.youtube.com/" target="_blank"><i class="iconfont icon-Youtube-fill"></i></a>
+          <a href="https://www.csdn.net/" target="_blank"><i class="iconfont icon-csdn"></i></a>
+        </div>
+      </div>
+      <div class="right static">
+        <dl>
+          <dt>Company</dt>
+          <dd><a href="">About Us</a></dd>
+          <dd><a href="">Features</a></dd>
+          <dd><a href="">Pricing</a></dd>
+        </dl>
+        <dl>
+          <dt>Products</dt>
+          <dd><a href="">Blog</a></dd>
+          <dd><a href="">Help Center</a></dd>
+          <dd><a href="">Contact</a></dd>
+        </dl>
+        <dl>
+          <dt>animation</dt>
+          <dd><a href="">FAQ's</a></dd>
+          <dd><a href="">Testimonial</a></dd>
+          <dd><a href="">Terms & Conditions</a></dd>
+        </dl>
+        <dl>
+          <dt>Relevant</dt>
+          <dd><a href="">Why</a></dd>
+          <dd><a href="">Products</a></dd>
+          <dd><a href="">Customers</a></dd>
+        </dl>
+      </div>
+      <div class="footer-nav ">© 2025 ULTRA CODE All rights reserved</div>
+    </footer>
+  </section>
+
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

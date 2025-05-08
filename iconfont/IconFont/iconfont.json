@@ -1,0 +1,58 @@
+{
+  "id": "4911920",
+  "name": "技能",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "10702362",
+      "name": "双箭头右",
+      "font_class": "shuangxia",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "4936989",
+      "name": "Youtube-fill",
+      "font_class": "Youtube-fill",
+      "unicode": "e883",
+      "unicode_decimal": 59523
+    },
+    {
+      "icon_id": "4937000",
+      "name": "github-fill",
+      "font_class": "github-fill",
+      "unicode": "e885",
+      "unicode_decimal": 59525
+    },
+    {
+      "icon_id": "15378838",
+      "name": "steam",
+      "font_class": "steam",
+      "unicode": "ecc3",
+      "unicode_decimal": 60611
+    },
+    {
+      "icon_id": "25231683",
+      "name": "csdn",
+      "font_class": "csdn",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "44219159",
+      "name": "右",
+      "font_class": "zuo",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "6204100",
+      "name": "右",
+      "font_class": "you",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    }
+  ]
+}
