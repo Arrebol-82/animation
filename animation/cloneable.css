@@ -8,6 +8,11 @@
   --cubic-default: ease;
 }
 
+@font-face {
+  font-family: 'SourceHanSansSC';
+  src: url('../SourceHanSansSC-Regular-2.otf');
+}
+
 body {
   background-color: var(--color-neutral-900);
   color: var(--color-light);
@@ -16,6 +21,7 @@ body {
   padding: 0;
   font-family: arial, sans-serif;
   scroll-behavior: smooth;
+  font-family: 'SourceHanSansSC';
 }
 
 .cloneable {
@@ -55,7 +61,7 @@ p {
 
 .main-col {
   width: 50%;
-  height: 100%;
+  height: 120%;
 }
 
 .main-img__list {
@@ -108,6 +114,7 @@ p {
   font-size: 4.5em;
   font-weight: 500;
   line-height: 1;
+  font-family: 'SourceHanSansSC';
   color: var(--color-light)
 }
 
@@ -246,6 +253,10 @@ p {
   inset: auto 0% 0%;
   overflow: hidden;
   color: inherit;
+}
+
+.overlay-nav button p.text-reg {
+  font-family: 'SourceHanSansSC';
 }
 
 .text-reg {

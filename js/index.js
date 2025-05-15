@@ -107,7 +107,7 @@ const animation = gsap.from(split.chars, {
   repeat: -1,
   yoyo: true,
   stagger: {
-    amount: 2.5,
+    amount: 6,
     from: "random"
   }
 });
