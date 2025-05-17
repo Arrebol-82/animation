@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./roll.css">
+  <script src="../gsap-public/umd/gsap.js"></script>
+  <!-- 引入ScrollTrigger 插件 平滑 -->
+  <script src="../gsap-public/umd/ScrollTrigger.js"></script>
+</head>
+
+<body>
+  <!-- Barre de progression -->
+  <div class="progress-bar">
+    <div class="progress-bar-fill"></div>
+    <div class="progress-step active" data-step="1">🌳</div>
+    <div class="progress-step" data-step="2">👻</div>
+    <div class="progress-step" data-step="3">🌙</div>
+  </div>
+
+  <!-- Contenu principal -->
+  <div class="story-container">
+    <!-- SECTION 1: THE BEGINNING OF THE ADVENTURE -->
+    <section class="story-section" id="section1">
+      <div class="text-block">
+        <h2>操场</h2>
+        <p>学校操场开阔明亮，绿草如茵。蓝天下，同学们或围坐交谈，或自在休憩。远处跑道环绕，建筑现代，满是青春朝气。</p>
+        <button class="next-section-btn">往下探索</button>
+      </div>
+      <div class="image-block">
+        <img src="./image/caochang1.jpg" alt="Illustration of the Enchanted Forest" class="image-placeholder" />
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE MYSTERIOUS CREATURE -->
+    <section class="story-section" id="section2">
+      <div class="text-block">
+        <h2>日暮</h2>
+        <p>日暮时分，校园披霞。楼群静立，操场绿意绵延。湖水波光，草木葱茏。天际色彩交织，绘就校园静谧美好的画卷。
+        </p>
+        <button class="next-section-btn">继续向下探索吧</button>
+      </div>
+      <div class="image-block">
+        <img src="./image/rimu.jpg" alt="Illustration of the mythical creature" class="image-placeholder" />
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE ULTIMATE CHALLENGE -->
+    <section class="story-section" id="section3">
+      <div class="text-block">
+        <h2>早晨</h2>
+        <p>晨光熹微，淡金色的朝晖倾洒校园。操场的绿草沾满晶莹露珠，鲜红跑道蜿蜒其间，蓬勃朝气在薄雾中悄然漫溢。</p>
+      </div>
+      <div class="image-block">
+        <img src="./image/zaocheng.jpg" alt="Illustration of the final ritual" class="image-placeholder" />
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay">
+    <img class="modal-image" src="" alt="Image en grand">
+    <div class="modal-close"><span>×</span></div>
+  </div>
+  <footer class="footer">
+    <div class="left static">
+      <div class="title static">
+        <i class="iconfont icon-shuangxia"></i>
+        <h2>佛山市技师学院</h2>
+      </div>
+      <div class="Follow ">
+        Welcome to Fo Ji
+      </div>
+      <div class="tab">
+        <a href="https://github.com/" target="_blank"><i class="iconfont icon-github-fill"></i></a>
+        <a href="https://store.steampowered.com/about/" target="_blank"><i class="iconfont icon-steam"></i></a>
+        <a href="https://music.youtube.com/" target="_blank"><i class="iconfont icon-Youtube-fill"></i></a>
+        <a href="https://www.csdn.net/" target="_blank"><i class="iconfont icon-csdn"></i></a>
+      </div>
+    </div>
+    <div class="right static">
+      <dl>
+        <dt>学校</dt>
+        <dd><a href="https://www.fsnhjs.com/" target="_blank">关于学校</a></dd>
+        <dd><a href="https://www.fsnhjs.com/" target="_blank">特色</a></dd>
+        <dd><a href="https://www.fsnhjs.com/" target="_blank">报名</a></dd>
+      </dl>
+      <dl>
+        <dt>位置</dt>
+        <dd><a href="https://www.fsnhjs.com/" target="_blank">获取地址</a></dd>
+        <dd><a href="https://www.fsnhjs.com/" target="_blank">帮组中心</a></dd>
+        <dd><a href="https://www.fsnhjs.com/" target="_blank">联系</a></dd>
+      </dl>
+      <dl>
+        <dt>了解我们</dt>
+        <dd><a href="https://www.fsnhjs.com/" target="_blank">教学质量</a></dd>
+        <dd><a href="https://www.fsnhjs.com/" target="_blank">校园活动</a></dd>
+        <dd><a href="https://www.fsnhjs.com/" target="_blank">生活</a></dd>
+      </dl>
+      <dl>
+        <dt>相关</dt>
+        <dd><a href="https://www.fsnhjs.com/" target="_blank">宿舍</a></dd>
+        <dd><a href="https://www.fsnhjs.com/" target="_blank">课室</a></dd>
+        <dd><a href="https://www.fsnhjs.com/" target="_blank">教学氛围</a></dd>
+      </dl>
+    </div>
+    <div class="footer-nav ">© 2025 佛山市技师学院 版权所有</div>
+  </footer>
+  <script src="./roll.js"></script>
+</body>
+
+</html>
